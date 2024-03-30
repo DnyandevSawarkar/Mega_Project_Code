@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotic Arm Controller</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for the "x" icon -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="control-container">
+            <div class="block" id="block1" draggable="true">
+                <!-- <i class="fas fa-times delete-block"></i> -->
+                Arm Forward Steps:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block2" draggable="true">
+                Arm Backward Steps:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block3" draggable="true">
+                Body Forward Steps:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block4" draggable="true">
+                Body Backward Steps:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block5" draggable="true">
+                <!-- <i class="fas fa-times delete-block"></i> -->
+                Roate Left Steps:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block6" draggable="true">
+                Rotate Right Steps:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block7" draggable="true">
+                Gripper Upward Degrees:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block8" draggable="true">
+                Gripper Downward Degrees:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block9" draggable="true">
+                Gripper Open Degrees:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <div class="block" id="block10" draggable="true">
+                Gripper Close Degrees:
+                <select class="number-select">
+                    <!-- JavaScript will populate options -->
+                </select>
+            </div>
+            <!-- Add more blocks as needed -->
+        </div>
+        <div class="divider"></div>
+        <div class="workspace" id="workspace">
+            <!-- Workspace content goes here -->
+            <div id="submitButton" class="button-block">
+                Submit
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
