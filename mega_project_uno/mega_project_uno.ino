@@ -15,7 +15,7 @@ int openSwState = HIGH;
 int closeSwState = HIGH;                 
 int lastOpenSwState = HIGH;              
 int lastCloseSwState = HIGH;  
-int openSwReading, closeSwReading, joyXValue, joyYValue, joyZValue, JoySValue , X, Y, Z, S;
+int openSwReading, closeSwReading, joyXValue, joyYValue, joyZValue, JoySValue , X, Y, Z, S,previousSState;
 AccelStepper stepper_x(1, 2, 5);
 AccelStepper stepper_y(1, 3, 6);
 AccelStepper stepper_z(1, 4, 7);
@@ -172,11 +172,15 @@ void joystick() {
   else if (Z == -1)
     rotate_right();
   ////////////////////
-  else if (S == 1)
-    servo_up();
-  /////////////////////
-  else if (S == -1)
-    servo_down();
+  else if (S != previousSState) {
+    if (S == 1) {
+      servo_up(); // Call servo_up() if S changed from 0 to 1
+    } else if (S == -1) {
+      servo_down(); // Call servo_down() if S changed from 0 to -1
+    }
+    // Update previous state of S
+    previousSState = S;
+  }
   /////////////////////
   else
     stop(); 

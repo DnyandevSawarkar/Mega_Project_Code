@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <Servo.h>
-const char *ssid = "ESP-01-SoftAP"; // SSID of the ESP-01 in SoftAP mode
-const char *password = "password"; // Password for the SoftAP mode
+const char *ssid = "Robotic_Arm"; // SSID of the ESP-01 in SoftAP mode
+const char *password = "Group:23"; // Password for the SoftAP mode
 ESP8266WebServer server(80);
 Servo myServo;
 const int servoPin = 2; // D4
