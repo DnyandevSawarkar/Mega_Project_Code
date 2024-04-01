@@ -11,8 +11,8 @@ action_map = {
     'Rotate Right Steps': 'c',
     'Gripper Upward Degrees': 'e',
     'Gripper Downward Degrees': 'c',
-    'Gripper Close Degrees': 'p',
-    'Gripper Open Degrees': 'd'
+    'Gripper Close Degrees': 'd',
+    'Gripper Open Degrees': 'p'
 }
 
 def send_file_content():
@@ -41,6 +41,7 @@ def submit():
         block_data = block_data.replace(action, key)
     # Remove newline characters
     block_data = block_data.replace('\n', '')
+    print(block_data)
     with open('E:\\CODE\\Mega_Project\\mega_project\\Backend\\text.txt', 'w') as file:
         file.write(block_data)
     send_file_content()

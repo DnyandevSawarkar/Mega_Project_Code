@@ -2,7 +2,7 @@
 #include <ESP8266WebServer.h>
 #include <Servo.h>
 const char *ssid = "Robotic_Arm"; // SSID of the ESP-01 in SoftAP mode
-const char *password = "Group:23"; // Password for the SoftAP mode
+const char *password = "Group#23"; // Password for the SoftAP mode
 ESP8266WebServer server(80);
 Servo myServo;
 const int servoPin = 2; // D4
@@ -15,7 +15,7 @@ int servo_index1 = 0;
 int servo_values1[] = {55, 60, 65, 70, 75, 80, 95, 110, 120, 130, 145, 165, 175};
 int servo_values1_count = sizeof(servo_values1) / sizeof(servo_values1[0]);
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(10);
   WiFi.softAP(ssid, password);
   server.on("/receive", HTTP_POST, handleReceive);
@@ -30,6 +30,7 @@ void loop() {
   server.handleClient();
   if (Serial.available() > 0) {
     char receivedCommand = Serial.read();
+    // Serial.println(receivedCommand);
     if (receivedCommand == 'e') {
       Serial.println(" U");
       servo_up();

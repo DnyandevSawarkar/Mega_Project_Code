@@ -8,14 +8,14 @@ long receivedMMdistance = 0;
 char receivedCommand;
 bool newData, runallowed = false;
 const int open_sw = 12;
-const int close_sw = 13;
+const int close_sw = 11;
 const unsigned long debounceDelay = 50;  
 unsigned long lastDebounceTime = 0;
 int openSwState = HIGH;                 
 int closeSwState = HIGH;                 
 int lastOpenSwState = HIGH;              
 int lastCloseSwState = HIGH;  
-int openSwReading, closeSwReading, joyXValue, joyYValue, joyZValue, JoySValue , X, Y, Z, S,previousSState;
+int openSwReading, closeSwReading, joyXValue, joyYValue, joyZValue, JoySValue , X, Y, Z, S,previousSState,prv_i;
 AccelStepper stepper_x(1, 2, 5);
 AccelStepper stepper_y(1, 3, 6);
 AccelStepper stepper_z(1, 4, 7);
@@ -81,16 +81,21 @@ void servo_close() {
     Serial.println('p');
 }
 //////////////////////////////////////////////////////////////
-void handleOpenSwitch() {
-  if (openSwState == LOW && lastOpenSwState == HIGH) {
-    servo_open();
+void handleSwitch(int i) {
+  
+  if(i!=prv_i){
+    if(i == 1){
+      servo_open(); 
+    }
+    if (i == -1){
+      servo_close();
+    }
+    prv_i=i;
   }
+  
+  return;
 }
-void handleCloseSwitch() {
-  if (closeSwState == LOW && lastCloseSwState == HIGH) {
-    servo_close();
-  }
-}
+
 /////////////////////////////////////////////////////////////
 void stop() {
   runallowed = false;
@@ -115,12 +120,16 @@ void joystick() {
     lastDebounceTime = millis();
     if (openSwReading != openSwState) {
       openSwState = openSwReading;
-      handleOpenSwitch();
+      handleSwitch(1);
+     
     }
     if (closeSwReading != closeSwState) {
       closeSwState = closeSwReading;
-      handleCloseSwitch();
+      handleSwitch(-1);
+      
     }
+    handleSwitch(0);
+    
   }
   /////////////////////////////////////////////
   lastOpenSwState = openSwReading;
@@ -173,6 +182,8 @@ void joystick() {
     rotate_right();
   ////////////////////
   else if (S != previousSState) {
+    // Serial.println(previousSState);
+    // Serial.println(S);
     if (S == 1) {
       servo_up(); // Call servo_up() if S changed from 0 to 1
     } else if (S == -1) {
