@@ -1,5 +1,6 @@
 import requests
 from flask import Flask, request
+import os
 
 # Dictionary mapping actions to keys
 action_map = {
@@ -16,7 +17,7 @@ action_map = {
 }
 
 def send_file_content():
-    filename = "E:\\CODE\\Mega_Project\\mega_project\\Backend\\text.txt"
+    filename = os.path.join(os.path.dirname(__file__), "text.txt")
     esp_ip = "192.168.4.1"  # Hardcoded IP address for ESP-01 in SoftAP mode
     esp_port = "80"
     try:
