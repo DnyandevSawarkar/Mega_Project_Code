@@ -59,8 +59,10 @@
 * Controll Robotic Arm by Using Joystick's.
 
 ## Pictures
-* Robotic Arm
-![alt text](https://github.com/DnyandevSawarkar/Mega_Project_Code/Body_Parts_STL/Final_Arm.png?raw=true)
+➥ Robotic Arm
+* ![Final_Arm](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/5ceea629-4549-4ae4-bf29-42244f09ffbf)
 
-* Pick and Place operation 
-![alt text](https://github.com/DnyandevSawarkar/Mega_Project_Code/Body_Parts_STL/pick_place.jpg?raw=true)
+
+➥ Pick and Place operation 
+* ![pick_place](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/c1262846-9d40-4224-8066-c5a7d9a06bc4)
+
