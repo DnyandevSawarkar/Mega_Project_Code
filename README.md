@@ -43,7 +43,7 @@
 * Install all the required python module using req.exe file.
 * Power on Roboic Arm Control Unit
 * Open Robotic Arm Controller.exe
-* Connect System to ESP-01 Wi-Fi 
+* Connect System to NodeMCU Wi-Fi 
     * SSID : Robotic_Arm 
     * Password : Robotic_Arm.
 
