@@ -7,7 +7,5 @@ int main() {
     // Install Flask library
     system("pip install Flask==3.0.1");
 
-    // Add more pip install commands for other libraries if needed
-
     return 0;
 }

@@ -16,6 +16,9 @@
  *    backend.py        : Get  data from the front end and send it to the esp-01 microcontroller.
  *    text.txt          : File that will be read by the esp-01, contains a block controller for the robotic arm.
 
+➥ Body Parts STL:
+ * STL Files Body and Gripper parts of the robotic arm.
+
 ➥ Frontend:
  *    index.html        : The main page of the website where you can write in an input field what command do you want to execute on the robotic arm.
  *    styles.css        : Stylesheet of the web page.
@@ -54,3 +57,10 @@
 
 ### 2) Hardware Application 
 * Controll Robotic Arm by Using Joystick's.
+
+## Pictures
+* Robotic Arm
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+* Pick and Place operation 
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)

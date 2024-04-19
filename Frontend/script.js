@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     var blocks = document.querySelectorAll(".block");
-
-    // Enable drag-and-drop for blocks within the workspace
     blocks.forEach(function(block) {
         var select = block.querySelector(".number-select");
         if (select) {
@@ -19,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     var workspace = document.getElementById("workspace");
-
-    // Allow drop on workspace
     workspace.addEventListener("dragover", function(event) {
         event.preventDefault();
         var targetBlock = event.target.closest(".block");
@@ -29,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Handle drag leave event
     workspace.addEventListener("dragleave", function(event) {
         var targetBlock = event.target.closest(".block");
         if (targetBlock) {
@@ -37,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Handle drop event on workspace
     workspace.addEventListener("drop", function(event) {
         event.preventDefault();
 
@@ -46,53 +40,45 @@ document.addEventListener("DOMContentLoaded", function() {
         var targetBlock = event.target.closest(".block");
 
         if (draggedBlock.closest(".control-container")) {
-            // Clone the dragged block before appending it to the workspace
             var clonedBlock = draggedBlock.cloneNode(true);
-            // Enable drag-and-drop for the cloned block
             clonedBlock.draggable = true;
 
-            // Add delete icon to cloned block
             var deleteIcon = document.createElement("i");
             deleteIcon.classList.add("fas", "fa-times", "delete-block");
             clonedBlock.prepend(deleteIcon);
 
-            // Insert the cloned block into the workspace at the correct position
             if (targetBlock && draggedBlock !== targetBlock) {
                 if (event.clientY < targetBlock.getBoundingClientRect().top + targetBlock.offsetHeight / 2) {
-                    workspace.insertBefore(clonedBlock, targetBlock); // Move cloned block before the target block
+                    workspace.insertBefore(clonedBlock, targetBlock); 
                 } else {
-                    workspace.insertBefore(clonedBlock, targetBlock.nextElementSibling); // Move cloned block after the target block
+                    workspace.insertBefore(clonedBlock, targetBlock.nextElementSibling);
                 }
             } else {
-                workspace.appendChild(clonedBlock); // If dropped outside any block, append to the end of workspace
+                workspace.appendChild(clonedBlock); 
             }
 
-            // Delete block when delete icon is clicked
             deleteIcon.addEventListener("click", function() {
                 clonedBlock.remove();
             });
         } else {
-           // Reorder blocks within the workspace
+           
            if (targetBlock && draggedBlock !== targetBlock) {
                 if (event.clientY < targetBlock.getBoundingClientRect().top + targetBlock.offsetHeight / 2) {
-                    workspace.insertBefore(draggedBlock, targetBlock); // Move dragged block before the target block
+                    workspace.insertBefore(draggedBlock, targetBlock); 
                 } else {
-                    workspace.insertBefore(draggedBlock, targetBlock.nextElementSibling); // Move dragged block after the target block
+                    workspace.insertBefore(draggedBlock, targetBlock.nextElementSibling);
                 }
             } else {
-                workspace.appendChild(draggedBlock); // If dropped outside any block, append to the end of workspace
+                workspace.appendChild(draggedBlock); 
             }
         }
 
-        // Remove dragging-over class from all blocks
         var allBlocks = document.querySelectorAll(".block");
         allBlocks.forEach(function(block) {
             block.classList.remove("dragging-over");
         });
     });
 
-    // Save workspace data to text file
-   // Save workspace data to text file
     var submitButton = document.getElementById("submitButton");
 
     submitButton.addEventListener("click", function() {
@@ -107,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Send block data to the backend server on port 5000
     fetch('http://127.0.0.1:5000/submit', {
         method: 'POST',
         headers: {

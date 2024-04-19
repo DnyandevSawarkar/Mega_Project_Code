@@ -18,49 +18,43 @@ body {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #687f80; /* Adjust as needed */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
+    background-color: #687f80; 
+    overflow-y: auto; 
 }
 
 .control-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 10px; /* Gap between blocks */
-    background-color: #93bdca; /* Adjust as needed */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
-    border-right: 1px solid #ccc; /* Add border to separate from workspace */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    background-color: #93bdca; 
+    overflow-y: auto; 
+    border-right: 1px solid #ccc;
 }
 
-
-
-/* Style for blocks */
 .block {
     padding: 20px;
-    background-color: #747474; /* Default background color */
+    background-color: #747474;
     border: 1px solid #ccc;
     cursor: pointer;
-    text-align: center; /* Align block name in the center */
-    user-select: none; /* Prevent text selection */
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.4; /* Adjust line height for better readability */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-align: center;
+    user-select: none; 
+    font-size: 16px; 
+    line-height: 1.4; 
+    transition: background-color 0.3s ease; 
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s ease; /* Add smooth transition for block movement */
-
+    transition: transform 0.2s ease; 
 }
 
 .block:hover {
-    background-color: #afdfb7; /* Lighter background color on hover */
+    background-color: #afdfb7; 
 }
 
-/* Additional styling for different light colors */
+
 .block:nth-child(odd) {
-    background-color: #e9b1b1; /* Alternate background color for odd blocks */
+    background-color: #e9b1b1; 
 }
-/* box_style.css */
-/* Existing CSS styles... */
 
 .number-select {
     margin-left: 10px;
@@ -69,46 +63,41 @@ body {
     font-size: 14px;
 }
 
-/* box_style.css */
-/* Existing CSS styles... */
-
 .workspace .block {
-    position: relative; /* Make position relative to contain the absolute positioned delete icon */
+    position: relative;
     cursor: pointer;
-    margin-bottom: 10px; /* Adjust spacing between blocks */
+    margin-bottom: 10px; 
 }
 
 .workspace .delete-block {
-    position: absolute; /* Position "x" icon absolutely */
-    left: 5px; /* Position at the leftmost side of each block */
-    top: 10px; /* Align "x" icon vertically in the block */
+    position: absolute;
+    left: 5px; 
+    top: 10px;
     cursor: pointer;
-    color: red; /* Change color of the delete icon */
+    color: red;
 }
 
-/* Adjust spacing of the "x" icon as needed */
-/* Adjusted CSS for Submit Button */
 .button-block {
-    background-color: green; /* Idle color */
+    background-color: green; 
     user-select: none;
     color: white;
     text-align: center;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px; 
 }
 .button-block:hover {
-    background-color: #61e9e2; /* Hover color */
+    background-color: #61e9e2; 
 }
 
 .button-block.clicked {
-    background-color: #f3a2a2; /* Clicked color */
+    background-color: #f3a2a2; 
 }
 .workspace .block.dragging {
-    transform: translateY(-10px); /* Move the dragging block slightly upwards */
+    transform: translateY(-10px);
 }
 
 .workspace .block.dragging-over {
-    border: 2px dashed #ccc; /* Visual indication of drag over */
+    border: 2px dashed #ccc;
 }
