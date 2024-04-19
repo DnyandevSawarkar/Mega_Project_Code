@@ -4,16 +4,16 @@ import os
 
 # Dictionary mapping actions to keys
 action_map = {
-    'Arm Forward Steps': 'a',
-    'Arm Backward Steps': 's',
-    'Body Forward Steps': 'q',
-    'Body Backward Steps': 'w',
-    'Rotate Left Steps': 'z',
-    'Rotate Right Steps': 'c',
-    'Gripper Upward Degrees': 'e',
-    'Gripper Downward Degrees': 'c',
-    'Gripper Close Degrees': 'd',
-    'Gripper Open Degrees': 'p'
+    'Arm Forward Steps': 'aaaaaaaaaaaaaaaaa',
+    'Arm Backward Steps': 'sssssssssssssssss',
+    'Body Forward Steps': 'qqqqqqqqqqqqqqqqq',
+    'Body Backward Steps': 'wwwwwwwwwwwwwwwww',
+    'Rotate Left Steps':'zzzzzzzzzzzzzzzzz',
+    'Rotate Right Steps': 'ccccccccccccccccc',
+    'Gripper Upward Degrees': 'eeeeeeeeeeeeeeeee',
+    'Gripper Downward Degrees': 'ccccccccccccccccc',
+    'Gripper Close Degrees': 'ddddddddddddddddd',
+    'Gripper Open Degrees': 'ppppppppppppppppp'
 }
 
 def send_file_content():
@@ -36,6 +36,7 @@ app = Flask(__name__)
 
 @app.route('/submit', methods=['POST'])
 def submit():
+    filename = os.path.join(os.path.dirname(__file__), "text.txt")
     block_data = request.form['block_data']
     # Map action names to keys
     for action, key in action_map.items():
@@ -43,11 +44,11 @@ def submit():
     # Remove newline characters
     block_data = block_data.replace('\n', '')
     print(block_data)
-    with open('E:\\CODE\\Mega_Project\\mega_project\\Backend\\text.txt', 'w') as file:
+    with open(filename, 'w') as file:
         file.write(block_data)
     send_file_content()
     return 'Data saved successfully!'
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)  # Run the Flask application on port 5000
+    app.run(host='127.0.0.1',port=5000, debug=True)  # Run the Flask application on port 5000

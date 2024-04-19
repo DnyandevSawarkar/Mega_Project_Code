@@ -36,48 +36,58 @@ void setup() {
 void body_forward() {
   runallowed = true;
   receivedMMdistance = 10;
+  // Serial.println("S1"); 
   stepper_x.move(10); 
 }
 void body_backward() {
   runallowed = true;
   receivedMMdistance = 10;
+  // Serial.println("S1`"); 
   stepper_x.move(-10); 
 }
 ////////////////////////////////////////////////////////////
 void arm_forward() {
   runallowed = true;
   receivedMMdistance = 10;
+  // Serial.println("S2"); 
   stepper_y.move(10); 
 }
 void arm_backward() {
   runallowed = true;
   receivedMMdistance = 10;
+  // Serial.println("S2`"); 
   stepper_y.move(-10); 
 }
 //////////////////////////////////////////////////////////
 void rotate_left() {
   runallowed = true;
   receivedMMdistance = 10;
+  // Serial.println("S3"); 
   stepper_z.move(10); 
 
 }
 void rotate_right() {
   runallowed = true;
   receivedMMdistance = 10;
+  // Serial.println("S3`"); 
   stepper_z.move(-10); 
 }
 ////////////////////////////////////////////////////////
 void servo_up() {
+  // Serial.println("SU"); 
   Serial.println('e');
 }
 void servo_down() {
+  // Serial.println("SD"); 
   Serial.println('c');
 }
 //////////////////////////////////////////////////////
 void servo_open() {
+  // Serial.println("SO"); 
     Serial.println('d');
 }
 void servo_close() {
+  // Serial.println("SC"); 
     Serial.println('p');
 }
 //////////////////////////////////////////////////////////////
@@ -114,11 +124,12 @@ void joystick() {
   joyYValue = analogRead(JoyY);
   joyZValue = analogRead(JoyZ);
   JoySValue = analogRead(JoyS);
-  delay(5);
+  delay(10);
   ///////////////////////////////////////////////
   if (millis() - lastDebounceTime > debounceDelay) {
     lastDebounceTime = millis();
     if (openSwReading != openSwState) {
+      // Serial.println("ooooooO");
       openSwState = openSwReading;
       handleSwitch(1);
      
@@ -126,9 +137,10 @@ void joystick() {
     if (closeSwReading != closeSwState) {
       closeSwState = closeSwReading;
       handleSwitch(-1);
-      
+      // Serial.println("Ssssssssssss");
     }
     handleSwitch(0);
+    // Serial.println("xxxxxxxxxxxxxxxxxx");
     
   }
   /////////////////////////////////////////////
@@ -141,6 +153,7 @@ void joystick() {
     X = 1; 
   if ((0 <= joyXValue) && (joyXValue <= 399))
     X = -1;
+
   ///////////////************///////////////
   if ((400 < joyZValue) && (joyZValue <= 600))
     Z = 0;
@@ -148,6 +161,7 @@ void joystick() {
     Z = 1; 
   if ((0 <= joyZValue) && (joyZValue <= 399))
     Z = -1;
+
   ///////////////************////////////////
   if ((400 < joyYValue) && (joyYValue <= 600))
     Y = 0;
@@ -155,6 +169,7 @@ void joystick() {
     Y = -1; 
   if ((0 <= joyYValue) && (joyYValue <= 399))
     Y = 1;
+
   ///////////////************////////////////
   if ((400 < JoySValue) && (JoySValue <= 600))
     S = 0;
@@ -162,9 +177,13 @@ void joystick() {
     S = -1; 
   if ((0 <= JoySValue) && (JoySValue <= 399))
     S = 1;
+
   ///////////////////////////////////////////
-  if (X == 1)
+  // delay(500);
+  if (X == 1){
+    
     body_forward();
+  }
   /////////////////////
   else if (X == -1)
     body_backward();
@@ -206,32 +225,32 @@ void checkSerial(){
   if(newData == true){
     /////////////////////////////////////////
     if(receivedCommand == 'q'){
-      Serial.println("S1"); 
+      // Serial.println("S1"); 
       body_forward();
     }
     //////////////////
     if(receivedCommand == 'w'){
-      Serial.println("S1`"); 
+      // Serial.println("S1`"); 
       body_backward(); 
     }
     ////////////////////////////////////////////
     if(receivedCommand == 'a'){
-      Serial.println("S2"); 
+      // Serial.println("S2"); 
       arm_forward();
     }
     //////////////////
     if(receivedCommand == 's'){
-      Serial.println("S2`"); 
+      // Serial.println("S2`"); 
       arm_backward();
     }
     //////////////////////////////////////////////
     if(receivedCommand == 'z'){
-      Serial.println("S3"); 
+      // Serial.println("S3"); 
       rotate_left(); 
     }
     //////////////////
     if(receivedCommand == 'x'){
-      Serial.println("S3`"); 
+      // Serial.println("S3`"); 
       rotate_right();
     }
     ////////////////////////////////////////////

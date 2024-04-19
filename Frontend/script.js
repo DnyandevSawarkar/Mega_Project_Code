@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Send block data to the backend server on port 5000
-    fetch('http://localhost:5000/submit', {
+    fetch('http://127.0.0.1:5000/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
