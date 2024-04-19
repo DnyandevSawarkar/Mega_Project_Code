@@ -60,9 +60,9 @@
 
 ## Pictures
 ➥ Robotic Arm
-* ![Final_Arm](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/5ceea629-4549-4ae4-bf29-42244f09ffbf)
+![Final_Arm](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/5ceea629-4549-4ae4-bf29-42244f09ffbf)
 
 
 ➥ Pick and Place operation 
-* ![pick_place](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/c1262846-9d40-4224-8066-c5a7d9a06bc4)
+![pick_place](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/c1262846-9d40-4224-8066-c5a7d9a06bc4)
 
