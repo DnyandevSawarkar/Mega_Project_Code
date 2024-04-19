@@ -39,6 +39,36 @@
  *    req.c            : C code which contains list of python module required for backend.
  *    req.exe          : Excutalbe exe file which will install all the required python module.
 
+## Hardware Configuration
+### UNO
+* D12  : Joystick 1 Switch
+* D11  : Joystick 1 Switch ( Z+ pin of CNC Shield)
+* A0   : Joystick 1 Vx
+* A1   : Joystick 1 Vy
+* A2   : Joystick 2 Vx
+* A3   : Joystick 2 Vy
+* GND  : Joysticks GND
+* 5V   : Joysticks VCC
+
+### NodeMCU
+* D4   : Servo 1 Signal (Gripper Body)
+* D3   : Servo 2 Signal (Gripper Hands)
+* GND  : Servos GND
+* 5V   : Servos VCC
+
+### Serial Communication
+* UNO RX -> TX ESP
+* ESP RX -> TX UNO
+
+### Power Supply
+* 230V AC to
+   * 12V 5Amp. DC for CNC Shield
+   * 9V 1.5Amp. DC for UNO Shield Power Jack
+      * 9V to 5V (7805) for NodeMCU Vin
+
+➥ Note : Use separate power source for Joystcks and Servos for proper Working
+* Servo 5V from 7805
+* Joystick's 5V from CNC Shield 
 
 ## How To Run
 * Install Python 3.7.3.
@@ -56,7 +86,7 @@
 * Observe Robotic Arm Movement.
 
 ### 2) Hardware Application 
-* Controll Robotic Arm by Using Joystick's.
+* Controll Robotic Arm by Using Joystick's. 
 
 ## Pictures
 ### Robotic Arm
