@@ -60,7 +60,7 @@
 
 ## Pictures
 * Robotic Arm
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/DnyandevSawarkar/Mega_Project_Code/Body_Parts_STL/Final_Arm.png?raw=true)
 
 * Pick and Place operation 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/DnyandevSawarkar/Mega_Project_Code/Body_Parts_STL/pick_place.jpg?raw=true)
