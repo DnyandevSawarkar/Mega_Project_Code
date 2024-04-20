@@ -63,7 +63,7 @@
 ### Power Supply
 * 230V AC to
    * 12V 5Amp. DC for CNC Shield
-   * 9V 1.5Amp. DC for UNO Shield Power Jack
+   * 9V 1.5Amp. DC for UNO Power Jack
       * 9V to 5V (7805) for NodeMCU Vin
 
 ➥ Note : Use separate power source for Joystcks and Servos for proper Working
