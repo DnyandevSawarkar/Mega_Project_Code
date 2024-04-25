@@ -92,7 +92,42 @@
 ### Robotic Arm
 ![Final_Arm](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/5ceea629-4549-4ae4-bf29-42244f09ffbf)
 
+![arm_right](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/917d1e75-4a56-4d27-aaf6-94bdaab04ea9)
+
+![arm_left](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/d2467ff9-aef9-4def-b1d8-e327f14be0ac)
+
 
 ### Pick and Place operation 
 ![pick_place](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/c1262846-9d40-4224-8066-c5a7d9a06bc4)
 
+### Web Dashboard
+![Web Page](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/13e069b8-6bb9-43ed-ad40-7cef5e9f2e31)
+
+
+### Control Unit
+![control_unit](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/28810ede-4af8-4361-b89d-ecb74c230598)
+
+
+### Block Diagram 
+![Robotic arm block diagram](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/89051b3e-5c0b-46c1-85fb-522b4700d66f)
+
+
+### FlowChart
+#### Hardware - Joystick Control
+![joystick ](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/8b434297-e5df-4d80-ae21-737f76a7f802)
+
+#### Software - Web Dashboard Control
+![web_flowchart ](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/8cff66b0-fc43-4432-bc10-455128d4ad6f)
+
+
+### Circuit Schematic and PCB Board Connection
+#### Schematic
+![circuit](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/5c19b15a-6d73-494b-84ca-46671b6ae98c)
+
+#### Top Layer
+![Top_Layer](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/3ce37f41-615b-465f-a597-6a06917f58b3)
+
+#### Buttom Layer
+![Bottom_layer](https://github.com/DnyandevSawarkar/Mega_Project_Code/assets/79653351/a3045857-0c02-4f83-8ee0-639cf17d64b1)
+
+* Note : Circuit Schematic and PCB Board Connection are only for understanding connection their no need of this PCB CNC Shield get directly attached to UNO and for mounting NodeMCU we can create ZeroPCB based PCB which directly connects to CNC shield and works on external supply obtained from 7805 as an input for servo and NodeMCU
