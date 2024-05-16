@@ -4,16 +4,16 @@ import os
 
 # Dictionary mapping actions to keys
 action_map = {
-    'Arm Forward Steps': 'aaaaaaaaaaaaaaaaa',
-    'Arm Backward Steps': 'sssssssssssssssss',
-    'Body Forward Steps': 'qqqqqqqqqqqqqqqqq',
-    'Body Backward Steps': 'wwwwwwwwwwwwwwwww',
-    'Rotate Left Steps':'zzzzzzzzzzzzzzzzz',
-    'Rotate Right Steps': 'ccccccccccccccccc',
-    'Gripper Upward Degrees': 'eeeeeeeeeeeeeeeee',
-    'Gripper Downward Degrees': 'ccccccccccccccccc',
-    'Gripper Close Degrees': 'ddddddddddddddddd',
-    'Gripper Open Degrees': 'ppppppppppppppppp'
+    'Arm Forward Steps'         : 'wwwwwwwwwwwwwwwww',
+    'Arm Backward Steps'        : 'qqqqqqqqqqqqqqqqq',
+    'Body Forward Steps'        : 'aaaaaaaaaaaaaaaaa',
+    'Body Backward Steps'       : 'sssssssssssssssss',
+    'Rotate Left Steps'         : 'zzzzzzzzzzzzzzzzz',
+    'Rotate Right Steps'        : 'xxxxxxxxxxxxxxxxx',
+    'Gripper Upward Degrees'    : 'eeeeeeeeeeeeeeeee',
+    'Gripper Downward Degrees'  : 'ccccccccccccccccc',
+    'Gripper Close Degrees'     : 'ddddddddddddddddd',
+    'Gripper Open Degrees'      : 'ppppppppppppppppp'
 }
 
 def send_file_content():

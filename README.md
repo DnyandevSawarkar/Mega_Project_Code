@@ -71,7 +71,7 @@
 * Joystick's 5V from CNC Shield 
 
 ## How To Run
-* Install Python 3.7.3.
+* Install Python.
 * Clone git repository.
 * Install all the required python module using req.exe file.
 * Power on Roboic Arm Control Unit
