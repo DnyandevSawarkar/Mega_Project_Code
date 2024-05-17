@@ -43,7 +43,7 @@ def submit():
         block_data = block_data.replace(action, key)
     # Remove newline characters
     block_data = block_data.replace('\n', '')
-    print(block_data)
+    # print(block_data)
     with open(filename, 'w') as file:
         file.write(block_data)
     send_file_content()
