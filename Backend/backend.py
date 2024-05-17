@@ -6,14 +6,14 @@ import os
 action_map = {
     'Arm Forward Steps'         : 'wwwwwwwwwwwwwwwww',
     'Arm Backward Steps'        : 'qqqqqqqqqqqqqqqqq',
-    'Body Forward Steps'        : 'aaaaaaaaaaaaaaaaa',
-    'Body Backward Steps'       : 'sssssssssssssssss',
+    'Body Forward Steps'        : 'sssssssssssssssss',
+    'Body Backward Steps'       : 'aaaaaaaaaaaaaaaaa',
     'Rotate Left Steps'         : 'zzzzzzzzzzzzzzzzz',
     'Rotate Right Steps'        : 'xxxxxxxxxxxxxxxxx',
-    'Gripper Upward Degrees'    : 'eeeeeeeeeeeeeeeee',
-    'Gripper Downward Degrees'  : 'ccccccccccccccccc',
-    'Gripper Close Degrees'     : 'ddddddddddddddddd',
-    'Gripper Open Degrees'      : 'ppppppppppppppppp'
+    'Gripper Upward Degrees'    : 'e',
+    'Gripper Downward Degrees'  : 'c',
+    'Gripper Close Degrees'     : 'd',
+    'Gripper Open Degrees'      : 'p'
 }
 
 def send_file_content():
