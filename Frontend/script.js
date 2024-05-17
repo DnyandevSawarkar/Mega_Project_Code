@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     blocks.forEach(function(block) {
         var select = block.querySelector(".number-select");
         if (select) {
-            for (var i = 1; i <= 1000; i++) {
+            for (var i = 1; i <= 150; i++) {
                 var option = document.createElement("option");
                 option.text = i;
                 option.value = i;
