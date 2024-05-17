@@ -3,8 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     blocks.forEach(function(block) {
         var select = block.querySelector(".number-select");
         if (select) {
-            for (var i = 1; i <= 150; i++) {
-                var option = document.createElement("option");
+            var range = 150;  // Default range
+            if (block.id === 'block7' || block.id === 'block8') {
+                range = 15;  // Gripper Upward and Downward Degrees: 1 to 15
+            } else if (block.id === 'block9' || block.id === 'block10') {
+                range = 12;  // Gripper Open and Close Degrees: 1 to 12
+            }
+            for (let i = 1; i <= range; i++) {
+                let option = document.createElement("option");
                 option.text = i;
                 option.value = i;
                 select.appendChild(option);
